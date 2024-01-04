@@ -1,0 +1,41 @@
+body {
+  background-color: #000000;
+}
+
+.app {
+  position: relative;
+  
+  &__header {
+    div {
+      background-image: url('../public/texture.png');
+      height: 164px;
+      opacity: 0.2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+  
+    }
+
+    figure {
+      display: flex;
+      height: 164px;
+      align-items: end;
+      justify-content: center;
+      margin: 0;
+
+      img {
+        height: 90px;
+        width: 90px;
+        position: fixed;
+      }
+    }  
+  }
+
+  &__main-section {
+    background-image: url('../public/texture.png');
+    height: 614px;
+    opacity: 0.2;
+  }
+ 
+}
