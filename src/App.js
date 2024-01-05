@@ -36,6 +36,15 @@ function App() {
             <div className="app__main-section__main-photo__oval"></div>
             <img src="Kathe_photo.png" alt="kathe" />
           </figure>
+          <div>
+            <p className="korean">
+              ~ 안녕하세요 
+            </p>
+            <p className="text">
+              ~ Annyeonghaseyo ~
+            </p>
+          </div>
+          
 
         </div>
         
