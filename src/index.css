@@ -1,6 +1,52 @@
+@font-face {
+  font-family: 'Jua';
+  src: url('../public/fonts/Jua/Jua-Regular.ttf') format('truetype'); /* Ajusta la ruta y el formato según sea necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins/Poppins-Regular.ttf') format('truetype'); /* Ajusta la ruta y el formato según sea necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('../public/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'Poppins-SemiBoldItalic';
+  src: url('../public/fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('../public/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500; 
+  font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('../public/fonts/Open_Sans/static/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Jua', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

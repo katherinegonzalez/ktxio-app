@@ -6,36 +6,113 @@ body {
   position: relative;
   
   &__header {
-    div {
-      background-image: url('../public/texture.png');
-      height: 164px;
-      opacity: 0.2;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-  
+    background-image: url('../public/texture-opacity.png');
+    background-color: #000000;
+    height: 164px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+
+    img {
+      height: 90px;
+      width: 90px;
     }
-
-    figure {
-      display: flex;
-      height: 164px;
-      align-items: end;
-      justify-content: center;
-      margin: 0;
-
-      img {
-        height: 90px;
-        width: 90px;
-        position: fixed;
-      }
-    }  
+    
   }
 
   &__main-section {
-    background-image: url('../public/texture.png');
-    height: 614px;
-    opacity: 0.2;
+    /*height: 614px;*/
+    background-image: url('../public/texture-opacity.png');
+    background-color: #000000;
+    margin-top: 164px;
+    display: flex;
+    width: 100%;
+
+    &__main-tag {
+      /*margin-left: 200px;*/
+      margin-left: 150px;
+      padding-top: 98px;
+
+      span {
+        font-family: Poppins-SemiBold;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 30px;
+        color: #CFA3F7;
+      }
+
+      h1 {
+        color: #BF55ED;
+        font-family: Jua;
+        font-size: 65px;
+        letter-spacing: 6.5px;
+        line-height: 81px;
+      }
+
+      h2 {
+        font-family: Poppins-SemiBold;
+        color: #A8E0CC;
+        font-size: 30px;
+        letter-spacing: 0;
+        line-height: 46px;
+      }
+
+      p {
+        color: #CACACA;
+        font-family: Poppins;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 30px;
+      }
+
+      button {
+        color: #FFFFFF;
+        font-family: "OpenSans-SemiBold";
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 21px;
+        text-align: center;
+        border-radius: 4px;
+        background-color: #A627F2;
+        margin: 24px 0 44px;
+        padding: 7px 10px 9px;
+        border: 0;
+        display: block;
+      }
+      
+    }
+
+    &__main-photo {
+      padding-top: 53px;
+      position: relative;
+
+      
+        &__oval {
+          height: 372px;
+          width: 373px;
+          background: linear-gradient(338.4deg, #A7FDDB 0%, #EBADFF 99.04%);
+          border-radius: 100%;
+          position: absolute;
+          top: 40%; /* Posiciona el div en la mitad superior del contenedor principal */
+          left: 48%; /* Posiciona el div en el centro del contenedor principal */
+          transform: translate(-50%, -50%); /* Centra el div correctamente */
+        }
+
+        img {
+          height: 441px;
+          position: relative; /* Establecer posición relativa en la imagen */
+          z-index: 1; /* Hace que la imagen esté por encima del div */
+        }
+
+     
+ 
+    }
   }
  
 }
