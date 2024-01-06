@@ -6,7 +6,7 @@ body {
   position: relative;
   
   &__header {
-    align-items: end;
+    align-items: flex-end;
     background-color: #000000;
     background-image: url('../public/texture-opacity.png');
     display: flex;
@@ -133,6 +133,36 @@ body {
         line-height: 33px;
         opacity: 0.5;
         text-align: center;
+      }
+    }
+  }
+
+  &__aside-socialmedia {
+    align-items: center;
+    background-color: #242424;
+    border-radius: 0 3px 3px 0;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 16px 25px;
+
+    h2 {
+      color: #717171;
+      font-family:  Poppins-Medium;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin: 0 0 8px 0;
+    }
+
+    div {
+
+      .github {
+        margin-right: 31px;
+      }
+
+      img {
+        height: 29px;
+        width: 29px;
       }
     }
   }

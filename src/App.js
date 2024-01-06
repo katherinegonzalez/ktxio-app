@@ -51,6 +51,18 @@ function App() {
 
      
       </section>
+      <aside className="app__aside-socialmedia">
+        <h2>Find me here!</h2>
+        <div>
+          <a href="https://github.com/katherinegonzalez" className="github">
+            <img src="icons/github.svg" alt="github"></img>
+          </a>
+          <a href="https://www.linkedin.com/in/katherinexiomargonzalez/">
+            <img src="icons/linkedin.svg" alt="github"></img>
+          </a>
+        </div>
+        
+      </aside>
     </div>
     
   );
