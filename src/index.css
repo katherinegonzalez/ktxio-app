@@ -28,6 +28,14 @@
   font-style: italic;
 }
 
+/* Italic */
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url('../public/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
 /* Medium */
 @font-face {
   font-family: 'Poppins-Medium';

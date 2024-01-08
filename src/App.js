@@ -47,22 +47,58 @@ function App() {
           
 
         </div>
-        
-
-     
+          <aside className="app__aside-socialmedia">
+            <h2>Find me here!</h2>
+            <div>
+              <a href="https://github.com/katherinegonzalez" className="github">
+                <img src="icons/github.svg" alt="github"></img>
+              </a>
+              <a href="https://www.linkedin.com/in/katherinexiomargonzalez/">
+                <img src="icons/linkedin.svg" alt="github"></img>
+              </a>
+            </div>
+          </aside>
       </section>
-      <aside className="app__aside-socialmedia">
-        <h2>Find me here!</h2>
-        <div>
-          <a href="https://github.com/katherinegonzalez" className="github">
-            <img src="icons/github.svg" alt="github"></img>
-          </a>
-          <a href="https://www.linkedin.com/in/katherinexiomargonzalez/">
-            <img src="icons/linkedin.svg" alt="github"></img>
-          </a>
+      
+      <section className="app__projects-section">
+        <h2>
+          MY PROJECTS ~
+        </h2>
+        <div className="app__projects-section__projects-carousel">
+          <button className="app__projects-section__projects-carousel__left-arrow">
+            <img src="arrow-left.svg" alt="flecha izquierda"/>
+          </button>
+          <div className="app__projects-section__projects-carousel__content">
+            <div className="app__projects-section__projects-carousel__content__project">
+              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+            </div>
+            <div className="app__projects-section__projects-carousel__content__project">
+              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+            </div>
+            <div className="app__projects-section__projects-carousel__content__project">
+              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+            </div>
+            <div className="app__projects-section__projects-carousel__content__project">
+              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+            </div>
+          </div>
+          <button className="app__projects-section__projects-carousel__right-arrow">
+            <img src="arrow-right.svg" alt="flecha derecha"/>
+          </button>
         </div>
+        <h2>
+          MY ARTICLES ~
+        </h2>
+        <ol>
+          <li>
+            <a href="https://github.com/katherinegonzalez"> Modeling of a context-aware system to support interventions in physical activities </a>
+          </li>
+          <li>
+            <a href="https://github.com/katherinegonzalez">Modelling a Context-Aware System for the Promotion of Physical Activity and Healthy Nutrition.</a>
+          </li>
+        </ol>
         
-      </aside>
+      </section>
     </div>
     
   );
