@@ -19,8 +19,8 @@ function App() {
             Telecomunications Engineer
           </h2>
           <p>
-            I’m interested in web & mobile application 
-            development, accessibility, make end2end 
+            I’m interested in web & mobile application <br/>
+            development, accessibility, make end2end  <br/>
             tests, and get involved in front-end projects.
           </p>
 
@@ -59,45 +59,55 @@ function App() {
             </div>
           </aside>
       </section>
-      
-      <section className="app__projects-section">
-        <h2>
-          MY PROJECTS ~
-        </h2>
-        <div className="app__projects-section__projects-carousel">
-          <button className="app__projects-section__projects-carousel__left-arrow">
-            <img src="arrow-left.svg" alt="flecha izquierda"/>
-          </button>
-          <div className="app__projects-section__projects-carousel__content">
-            <div className="app__projects-section__projects-carousel__content__project">
-              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-            </div>
-            <div className="app__projects-section__projects-carousel__content__project">
-              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-            </div>
-            <div className="app__projects-section__projects-carousel__content__project">
-              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-            </div>
-            <div className="app__projects-section__projects-carousel__content__project">
-              <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-            </div>
+      <section className="app__projects-articles-section">
+        <div className="app__projects-articles-section__projects-section">
+          <div className="app__projects-articles-section__title">
+            <h2>
+              MY PROJECTS ~
+            </h2>
           </div>
-          <button className="app__projects-section__projects-carousel__right-arrow">
-            <img src="arrow-right.svg" alt="flecha derecha"/>
-          </button>
+          <div className="app__projects-articles-section__projects-carousel">
+            <button className="app__projects-articles-section__projects-carousel__left-arrow">
+              <img src="arrow-left.svg" alt="flecha izquierda"/>
+            </button>
+            <div className="app__projects-articles-section__projects-carousel__content">
+              <div className="app__projects-articles-section__projects-carousel__content__project">
+                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+              </div>
+              <div className="app__projects-articles-section__projects-carousel__content__project">
+                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+              </div>
+              <div className="app__pprojects-articles-section__projects-carousel__content__project">
+                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+              </div>
+              <div className="app__pprojects-articles-section__projects-carousel__content__project">
+                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
+              </div>
+            </div>
+            <button className="app__projects-articles-section__projects-carousel__right-arrow">
+              <img src="arrow-right.svg" alt="flecha derecha"/>
+            </button>
+          </div>
+           
         </div>
-        <h2>
-          MY ARTICLES ~
-        </h2>
-        <ol>
-          <li>
-            <a href="https://github.com/katherinegonzalez"> Modeling of a context-aware system to support interventions in physical activities </a>
-          </li>
-          <li>
-            <a href="https://github.com/katherinegonzalez">Modelling a Context-Aware System for the Promotion of Physical Activity and Healthy Nutrition.</a>
-          </li>
-        </ol>
+          <h2>
+            MY ARTICLES ~
+          </h2>
+          <ol>
+            <li>
+              <a href="https://github.com/katherinegonzalez"> Modeling of a context-aware system to support interventions in physical activities </a>
+            </li>
+            <li>
+              <a href="https://github.com/katherinegonzalez">Modelling a Context-Aware System for the Promotion of Physical Activity and Healthy Nutrition.</a>
+            </li>
+          </ol>
         
+        
+        
+      </section>
+
+      <section className="app__skills-section">
+
       </section>
     </div>
     
