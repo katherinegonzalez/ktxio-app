@@ -1,0 +1,43 @@
+
+.progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+svg {
+    transform: rotate(-180deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #98E2CB;
+    stroke-width: 8;
+    opacity: 0.5;
+}
+
+.circle {
+    fill: none;
+    stroke: #CF44F5;
+    stroke-width: 8;
+    stroke-dasharray: 283; /* Circunferencia del círculo (2 * π * r) */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    color: #CACACA;
+    line-height: 33px;
+}
+
+/* JavaScript para animar la barra */
+.progress-circle[data-progress] .circle {
+    stroke-dashoffset: calc(283 - (283 * var(--progress)) / 100);
+}

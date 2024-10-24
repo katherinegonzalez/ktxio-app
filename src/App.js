@@ -1,4 +1,5 @@
 import './App.scss';
+import { ProgressBar } from './components/ProgressBar';
 
 function App() {
 
@@ -118,13 +119,7 @@ function App() {
           {'<strong>'}
         </span>
 
-        <div class="progress-circle" data-progress="70">
-          <svg>
-              <circle cx="50" cy="50" r="45" class="circle-bg"></circle>
-              <circle cx="50" cy="50" r="45" class="circle"></circle>
-          </svg>
-        <div class="progress-text">70%</div>
-        </div>
+        <ProgressBar />
         
       </section>
     </div>
