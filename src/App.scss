@@ -266,5 +266,72 @@ body {
   &__skills-section {
     background-color: #1B1A1A;
     background-image: url('../public/texture-opacity-0-05.png');
+    display: flex;
+    align-items: center;
+    padding: 205px 0 124px 0;
+    flex-direction: column;
+
+    span {
+      color: #CFA3F7;
+      font-family: 'Poppins-SemiBold';
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 30px;
+    }
+
+    p {
+      color: #CACACA;
+      font-family: Poppins;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin: 19px 369px 16px;
+      text-align: center;
+
+      span {
+        color: #A8E0CC;
+        font-weight: 600;
+      }
+    }
   }
+}
+
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+svg {
+  /*transform: rotate(-90deg);*/
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 10;
+}
+
+.circle {
+  fill: none;
+  stroke: #CF44F5;
+  stroke-width: 10;
+  stroke-dasharray: 283; /* 283*0.7; Circunferencia del círculo (2 * π * r) */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s ease-in-out;
+  
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* JavaScript para animar la barra */
+.progress-circle[data-progress] .circle {
+  stroke-dashoffset: calc(283 - (283 * var(--progress)) / 100);
 }

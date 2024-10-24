@@ -1,6 +1,7 @@
 import './App.scss';
 
 function App() {
+
   return (
     <div className="app">
       <header className="app__header">
@@ -107,7 +108,24 @@ function App() {
       </section>
 
       <section className="app__skills-section">
+        <span>
+          {'<strong>'}
+        </span>
+        <p>
+        Love to be disciplined, responsible, patient, adaptable & <span>motivated to keep learning</span> much more about the wide world of science and technology.
+        </p>
+        <span>
+          {'<strong>'}
+        </span>
 
+        <div class="progress-circle" data-progress="70">
+          <svg>
+              <circle cx="50" cy="50" r="45" class="circle-bg"></circle>
+              <circle cx="50" cy="50" r="45" class="circle"></circle>
+          </svg>
+        <div class="progress-text">70%</div>
+        </div>
+        
       </section>
     </div>
     
