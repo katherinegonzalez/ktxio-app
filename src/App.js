@@ -131,8 +131,29 @@ function App() {
           </div>
         </div>
 
-        
-        
+      </section>
+
+      <section className='app__contact-section'>
+        <div className='app__contact-section__title'>
+          <h1>
+            LET’S WORK <br/>
+            TOGETHER~
+          </h1>
+          <h2>
+            ~ 춤비, 시착 ~ Chumbi, Si chak  
+          </h2>
+          <p>
+            If you want to build an amazing <br/>
+            project drop me a line!
+          </p>
+          <span>
+            {'</end>_'}
+          </span>
+        </div>
+        <div lassName='app__contact-section__form-container'>
+         
+
+        </div>
       </section>
     </div>
     
