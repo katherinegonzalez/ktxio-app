@@ -119,7 +119,19 @@ function App() {
           {'<strong>'}
         </span>
 
-        <ProgressBar />
+        <div className="app__skills-section__container">
+          <h2>My skills ~</h2>
+          <div className="app__skills-section__container__progress-bars">
+          <ProgressBar name={'Javascript'}/>
+          <ProgressBar />
+          <ProgressBar />
+          <ProgressBar />
+          <ProgressBar />
+          <ProgressBar />
+          </div>
+        </div>
+
+        
         
       </section>
     </div>
