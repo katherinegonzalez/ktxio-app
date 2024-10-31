@@ -122,12 +122,12 @@ function App() {
         <div className="app__skills-section__container">
           <h2>My skills ~</h2>
           <div className="app__skills-section__container__progress-bars">
-          <ProgressBar name={'Javascript'}/>
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
-          <ProgressBar />
+          <ProgressBar skill={'Javascript'} porcentage={90}/>
+          <ProgressBar skill={'HTML'} porcentage={90}/>
+          <ProgressBar skill={'CSS'} porcentage={80}/>
+          <ProgressBar skill={'React'} porcentage={85}/>
+          <ProgressBar skill={'Angular'} porcentage={60}/>
+          <ProgressBar skill={'Rxs'} porcentage={70}/>
           </div>
         </div>
 

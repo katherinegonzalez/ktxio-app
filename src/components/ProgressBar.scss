@@ -26,7 +26,7 @@
 }
 
 svg {
-    transform: rotate(-180deg);
+    transform: rotate(90deg);
 }
 
 .circle-bg {
@@ -58,5 +58,5 @@ svg {
 
 /* JavaScript para animar la barra */
 .progress-circle[data-progress] .circle {
-    stroke-dashoffset: calc(283 - (283 * var(--progress)) / 100);
+    stroke-dashoffset: calc(283 + (283 * var(--progress)) / 100);
 }
