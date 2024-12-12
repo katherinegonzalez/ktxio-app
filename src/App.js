@@ -1,4 +1,5 @@
 import './App.scss';
+import EmailForm from './components/EmailForm';
 import { ProgressBar } from './components/ProgressBar';
 
 function App() {
@@ -90,11 +91,13 @@ function App() {
               <img src="arrow-right.svg" alt="flecha derecha"/>
             </button>
           </div>
-           
-        </div>
-          <h2>
-            MY ARTICLES ~
-          </h2>
+
+          <div className="app__projects-articles-section__title">
+            <h2>
+              MY ARTICLES ~
+            </h2>
+          </div>
+
           <ol>
             <li>
               <a href="https://github.com/katherinegonzalez"> Modeling of a context-aware system to support interventions in physical activities </a>
@@ -103,9 +106,9 @@ function App() {
               <a href="https://github.com/katherinegonzalez">Modelling a Context-Aware System for the Promotion of Physical Activity and Healthy Nutrition.</a>
             </li>
           </ol>
-        
-        
-        
+           
+        </div>
+          
       </section>
 
       <section className="app__skills-section">
@@ -134,26 +137,37 @@ function App() {
       </section>
 
       <section className='app__contact-section'>
-        <div className='app__contact-section__title'>
-          <h1>
-            LET’S WORK <br/>
-            TOGETHER~
-          </h1>
-          <h2>
-            ~ 춤비, 시착 ~ Chumbi, Si chak  
-          </h2>
-          <p>
-            If you want to build an amazing <br/>
-            project drop me a line!
-          </p>
-          <span>
-            {'</end>_'}
-          </span>
-        </div>
-        <div lassName='app__contact-section__form-container'>
-         
 
-        </div>
+          <div className='app__contact-section__title'>
+            <h1>
+              LET’S WORK <br/>
+              TOGETHER~
+            </h1>
+            <h2>
+              ~ 춤비, 시착 ~ Chumbi, Si chak  
+            </h2>
+            <p>
+              If you want to build an amazing <br/>
+              project drop me a line!
+            </p>
+            <span>
+              {'</end>_'}
+            </span>
+          </div>
+          <div className='app__contact-section__form-container'>
+          <div className='app__contact-section__form'>
+            <EmailForm />
+          </div>
+
+          </div>
+
+        
+      </section>
+
+      <section className='app__copyright-section'>
+        <h3>
+            KTXIO • Copyright © 2002-2020
+        </h3>
       </section>
     </div>
     

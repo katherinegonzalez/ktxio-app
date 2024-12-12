@@ -52,6 +52,14 @@
   font-style: normal;
 }
 
+/* Semi-Bold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: 'Jua', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
