@@ -1,7 +1,6 @@
 .projects-carousel {
     display: flex;
     flex-direction: row;
-    width: 852px;
     margin-bottom: 85px;
 
     button {
@@ -12,11 +11,11 @@
     }
 
     .carousel-btn.next {
-      margin: 0 0 0 46px;
+      margin: 0 150px 0 46px;
     }
 
     .carousel-btn.prev {
-      margin: 0 46px 0 0;
+      margin: 0 46px 0 150px;
     }
 
     .carousel-container {
