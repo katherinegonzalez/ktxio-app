@@ -1,4 +1,5 @@
 import './App.scss';
+import Carousel from './components/Carousel';
 import EmailForm from './components/EmailForm';
 import { ProgressBar } from './components/ProgressBar';
 
@@ -69,28 +70,7 @@ function App() {
               MY PROJECTS ~
             </h2>
           </div>
-          <div className="app__projects-articles-section__projects-carousel">
-            <button className="app__projects-articles-section__projects-carousel__left-arrow">
-              <img src="arrow-left.svg" alt="flecha izquierda"/>
-            </button>
-            <div className="app__projects-articles-section__projects-carousel__content">
-              <div className="app__projects-articles-section__projects-carousel__content__project">
-                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-              </div>
-              <div className="app__projects-articles-section__projects-carousel__content__project">
-                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-              </div>
-              <div className="app__pprojects-articles-section__projects-carousel__content__project">
-                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-              </div>
-              <div className="app__pprojects-articles-section__projects-carousel__content__project">
-                <img src="Nutriexercise.jpeg" alt="Nutriexcercise"/>
-              </div>
-            </div>
-            <button className="app__projects-articles-section__projects-carousel__right-arrow">
-              <img src="arrow-right.svg" alt="flecha derecha"/>
-            </button>
-          </div>
+          <Carousel />
 
           <div className="app__projects-articles-section__title">
             <h2>

@@ -1,0 +1,102 @@
+.projects-carousel {
+    display: flex;
+    flex-direction: row;
+    width: 852px;
+    margin-bottom: 85px;
+
+    button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .carousel-btn.next {
+      margin: 0 0 0 46px;
+    }
+
+    .carousel-btn.prev {
+      margin: 0 46px 0 0;
+    }
+
+    .carousel-container {
+        display: flex;
+        overflow: hidden;
+      }
+      
+    .carousel-track {
+        display: flex;
+    }
+
+        
+
+  }
+
+/* Ajuste para pantallas pequeñas (mostrar una imagen a la vez) */
+.carousel-image {
+    width: 100%;
+    margin: 0 30px 0 0;
+  }
+  
+/* Mostrar 4 imágenes al mismo tiempo en pantallas grandes */
+@media (min-width: 1024px) {
+.carousel-image {
+    width: 25%; /* Cada imagen ocupa el 25% del carrusel */
+}
+}
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  
+  .modal-close:hover {
+    background: darkred;
+  }
