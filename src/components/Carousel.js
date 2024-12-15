@@ -13,6 +13,15 @@ const Carousel = () => {
         "Nutriexercise.jpeg"
       ];
 
+    const projectsList = [
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""}, // Cambia estas rutas por las de tus imágenes reales
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""}
+      ];
+    
     const [currentIndex, setCurrentIndex] = useState(0);
     const [modalImage, setModalImage] = useState(null);
 
@@ -70,19 +79,19 @@ const Carousel = () => {
             <div className="carousel-container">
                 <div className="carousel-track" 
                      style={{
-            transform: `translateX(-${(currentIndex / itemsToShow) * 100}%)`,
-            gridTemplateColumns: `repeat(${images.length}, ${100 / itemsToShow}%)`,
-          }}   
+                     transform: `translateX(-${(currentIndex / itemsToShow) * 100}%)`,
+                     gridTemplateColumns: `repeat(${images.length}, ${100 / itemsToShow}%)`,
+                    }}   
                 >
 
-                    {images.map((image, index) => (
+                    {projectsList.map((project, index) => (
 
                         <div key={index}
                              className="carousel-image"
-                             onClick={() => openModal(image)}>
-                            <img src={image} alt={`Slide ${index}`}/>
+                             onClick={() => openModal(project.image)}>
+                            <img src={project.image} alt={`Slide ${index}`}/>
                             <div className="overlay">
-                                <p>Texto sobre la imagen</p>
+                                <p>{project.title}</p>
                             </div>
                         </div>
 
