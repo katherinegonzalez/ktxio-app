@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Corousel.scss';
 
 const Carousel = () => {
@@ -9,28 +9,49 @@ const Carousel = () => {
         "Nutriexercise.jpeg",
         "Nutriexercise.jpeg", 
         "Nutriexercise.jpeg",
+        "Nutriexercise.jpeg",
         "Nutriexercise.jpeg"
       ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [modalImage, setModalImage] = useState(null);
 
-      // Determina cuántas imágenes mostrar dependiendo del tamaño de la pantalla
-    const itemsToShow = window.innerWidth >= 1024 ? 4 : 1;
+    const [itemsToShow, setItemsToShow] = useState(4); // Número de imágenes visibles
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex + itemsToShow >= images.length ? 0 : prevIndex + itemsToShow
-        );
+  useEffect(() => {
+    // Ajustar el número de imágenes visibles según el ancho de la pantalla
+    const updateItemsToShow = () => {
+      if (window.innerWidth >= 1024) {
+        setItemsToShow(4);
+      } else if (window.innerWidth >= 768) {
+        setItemsToShow(2);
+      } else {
+        setItemsToShow(1);
+      }
     };
+
+    updateItemsToShow();
+    window.addEventListener("resize", updateItemsToShow);
+
+    console.log('items to show: ', itemsToShow);
+
+    return () => window.removeEventListener("resize", updateItemsToShow);
+  }, [itemsToShow]);
+
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + itemsToShow >= images.length ? 0 : prevIndex + 1
+    );
+  };
     
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0
-            ? Math.max(0, images.length - itemsToShow)
-            : prevIndex - itemsToShow
-        );
-    };
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0
+        ? Math.max(0, images.length - itemsToShow)
+        : prevIndex - 1
+    );
+  };
 
     const openModal = (image) => {
         setModalImage(image); // Muestra la imagen seleccionada en el modal
@@ -49,20 +70,22 @@ const Carousel = () => {
             <div className="carousel-container">
                 <div className="carousel-track" 
                      style={{
-                     transform: `translateX(-${(currentIndex / itemsToShow) * 100}%)`,
-                     transition: "transform 0.5s ease-in-out",
-                     display: "flex",
-                    }}     
+            transform: `translateX(-${(currentIndex / itemsToShow) * 100}%)`,
+            gridTemplateColumns: `repeat(${images.length}, ${100 / itemsToShow}%)`,
+          }}   
                 >
 
                     {images.map((image, index) => (
-                        <img
-                        key={index}
-                        src={image}
-                        alt={`Slide ${index}`}
-                        className="carousel-image"
-                        onClick={() => openModal(image)}
-                        />
+
+                        <div key={index}
+                             className="carousel-image"
+                             onClick={() => openModal(image)}>
+                            <img src={image} alt={`Slide ${index}`}/>
+                            <div className="overlay">
+                                <p>Texto sobre la imagen</p>
+                            </div>
+                        </div>
+
                     ))}
 
                 </div>

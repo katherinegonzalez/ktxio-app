@@ -23,26 +23,50 @@
         overflow: hidden;
       }
       
-    .carousel-track {
-        display: flex;
-    }
-
-        
+      .carousel-track {
+        display: grid; /* Usa grid para ajustar dinámicamente las imágenes */
+        grid-auto-flow: column;
+        gap: 30px; /* Espaciado entre las imágenes */
+        transition: transform 0.5s ease-in-out;
+      }
 
   }
 
-/* Ajuste para pantallas pequeñas (mostrar una imagen a la vez) */
-.carousel-image {
-    width: 100%;
-    margin: 0 30px 0 0;
+  .carousel-image {
+    position: relative;
+    width: 100%; /* Ancho de la imagen */
+    height: 162px;
+    overflow: hidden; /* Evita que el overlay salga de los límites */
+    /*margin: 0 30px 0 0;*/
+    cursor: pointer;
   }
   
-/* Mostrar 4 imágenes al mismo tiempo en pantallas grandes */
-@media (min-width: 1024px) {
-.carousel-image {
-    width: 25%; /* Cada imagen ocupa el 25% del carrusel */
-}
-}
+  .carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+    display: block;
+  }
+  
+  .carousel-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Comienza oculto */
+    transition: opacity 0.3s ease; /* Efecto de transición */
+  }
+  
+  .carousel-image:hover .overlay {
+    opacity: 1; /* Muestra el overlay al hacer hover */
+  }
+
 
 
 /* Modal */

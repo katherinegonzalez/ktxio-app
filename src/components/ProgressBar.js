@@ -16,15 +16,15 @@ export const ProgressBar = ({
     });
 
  return (
-   <div class="progress-circle__container" style={{marginRight: marginRight}}>
-        <div class="progress-circle" data-progress={porcentage}>
+   <div className="progress-circle__container" style={{marginRight: marginRight}}>
+        <div className="progress-circle" data-progress={porcentage}>
             <svg>
-                <circle cx="50" cy="50" r="45" class="circle-bg"></circle>
-                <circle cx="50" cy="50" r="45" class="circle"></circle>
+                <circle cx="50" cy="50" r="45" className="circle-bg"></circle>
+                <circle cx="50" cy="50" r="45" className="circle"></circle>
             </svg>
-            <div class="progress-text">{porcentage}%</div>
+            <div className="progress-text">{porcentage}%</div>
         </div>
-        <div class="progress-circle__title">{skill}</div>
+        <div className="progress-circle__title">{skill}</div>
    </div>
     
  )
