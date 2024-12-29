@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Corousel.scss';
+import Modal from './Modal';
 
 const Carousel = () => {
 
@@ -14,7 +15,7 @@ const Carousel = () => {
       ];
 
     const projectsList = [
-        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""}, // Cambia estas rutas por las de tus imágenes reales
+        {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: "", video: 'nutriexercise.mp4'}, // Cambia estas rutas por las de tus imágenes reales
         {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
         {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
         {image: 'Nutriexercise.jpeg', title: 'NUTRIEXERCISE', url: ""},
@@ -24,6 +25,8 @@ const Carousel = () => {
     
     const [currentIndex, setCurrentIndex] = useState(0);
     const [modalImage, setModalImage] = useState(null);
+    const [modalTitle, setModalTitle] = useState('');
+    const [projectVideo, setProjectVideo] = useState('');
 
     const [itemsToShow, setItemsToShow] = useState(4); // Número de imágenes visibles
 
@@ -62,13 +65,14 @@ const Carousel = () => {
     );
   };
 
-    const openModal = (image) => {
-        setModalImage(image); // Muestra la imagen seleccionada en el modal
-      };
-    
-    const closeModal = () => {
-        setModalImage(null); // Cierra el modal
-      };
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = ({title, video}) => {
+      setModalTitle(title)
+      setProjectVideo(video)
+      setShowModal(true)
+    };
+    const closeModal = () => setShowModal(false);
     
 
     return (
@@ -88,10 +92,13 @@ const Carousel = () => {
 
                         <div key={index}
                              className="carousel-image"
-                             onClick={() => openModal(project.image)}>
+                             onClick={() => openModal({title: project.title, video: project.video})}>
                             <img src={project.image} alt={`Slide ${index}`}/>
                             <div className="overlay">
                                 <p>{project.title}</p>
+                            </div>
+                            <div className="sourceCode">
+                                <a href="https://github.com/katherinegonzalez">SOURCE CODE</a>
                             </div>
                         </div>
 
@@ -103,17 +110,9 @@ const Carousel = () => {
               <img src="arrow-right.svg" alt="flecha derecha"/>
             </button>
 
-            {/* Modal */}
-            {modalImage && (
-                <div className="modal" onClick={closeModal}>
-                <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                    <img src={modalImage} alt="Ampliada" className="modal-image" />
-                    <button className="modal-close" onClick={closeModal}>
-                    ×
-                    </button>
-                </div>
-                </div>
-            )}
+            <Modal show={showModal} onClose={closeModal} title={modalTitle} video={projectVideo} />
+           
+
 
           </div>
     );
