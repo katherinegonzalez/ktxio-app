@@ -67,9 +67,10 @@ const Carousel = () => {
 
     const [showModal, setShowModal] = useState(false);
 
-    const openModal = ({title, video}) => {
+    const openModal = ({title, video, image}) => {
       setModalTitle(title)
       setProjectVideo(video)
+      setModalImage(image)
       setShowModal(true)
     };
     const closeModal = () => setShowModal(false);
@@ -92,7 +93,7 @@ const Carousel = () => {
 
                         <div key={index}
                              className="carousel-image"
-                             onClick={() => openModal({title: project.title, video: project.video})}>
+                             onClick={() => openModal({title: project.title, video: project.video, image: project.image})}>
                             <img src={project.image} alt={`Slide ${index}`}/>
                             <div className="overlay">
                                 <p>{project.title}</p>
@@ -110,7 +111,7 @@ const Carousel = () => {
               <img src="arrow-right.svg" alt="flecha derecha"/>
             </button>
 
-            <Modal show={showModal} onClose={closeModal} title={modalTitle} video={projectVideo} />
+            <Modal show={showModal} onClose={closeModal} title={modalTitle} video={projectVideo} image={modalImage}/>
            
 
 

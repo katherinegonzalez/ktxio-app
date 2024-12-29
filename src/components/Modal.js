@@ -17,13 +17,12 @@ const Modal = ({ show, onClose, title, video='', image='' }) => {
         </div>
         <div className='modal-content'>
 
-        <video height='300' controls autoplay loop muted poster="imagen-poster.jpg">
+        <video height='300' controls autoplay loop muted poster={image}>
           <source src={projectvideo} type="video/mp4" />
             Tu navegador no soporta el elemento <code>video</code>.
         </video>
 
         </div>
-
       </div>
     </div>
   );
