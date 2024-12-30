@@ -8,7 +8,13 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <img src="KTXIO_Negative_Brand.png" alt="ktxio logo"></img>
+      <div className="header__content">
+      <img src="KTXIO_Negative_Brand.png" alt="ktxio logo"></img>
+        <div className="header__buttons">
+          <button className="es-button">ES</button><span> / </span><button className="en-button">EN</button>
+        </div>
+      </div>
+        
       </header>
       <section className="app__main-section">
         <div className="app__main-section__main-tag">

@@ -7,6 +7,7 @@ body {
   position: relative;
   
   &__header {
+    display: flex;
     align-items: flex-end;
     background-color: #1B1A1A;
     background-image: url('../public/texture-opacity-0-05.png');
@@ -23,6 +24,52 @@ body {
       height: 90px;
       width: 90px;
     }
+
+
+    .header__content {
+      position: relative;
+      width: 100%;
+      max-width: 1200px; /* Opcional: controla el ancho máximo */
+      display: flex;
+      justify-content: center; /* Centra el logo horizontalmente */
+      align-items: center;
+    }
+
+    .header__buttons {
+      position: absolute;
+      right: 89px; /* Espaciado desde el borde derecho */
+      color: #CACACA;
+      font-size: 20px;
+      font-family: Poppins-SemiBold;
+    }
+
+    button {
+      background: none;
+      border: none;
+      height: 28px;
+      color: #CACACA;
+      font-family: Poppins-SemiBold;
+      font-size: 20px;
+      letter-spacing: 0.67px;
+      line-height: 30px;
+      padding: 0 2px 2px;
+      
+    }
+
+    button.en-button::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; /* Coloca la línea en la parte inferior */
+      left: 46px; /* Margen izquierdo para alinearlo con el padding */
+      right: 0px; /* Margen derecho para alinearlo con el padding */
+      height: 4px; /* Grosor de la línea */
+      background-color: #9825AA; /* Color de la línea */
+      border-radius: 2px; /* Aplica el redondeado a la línea */
+    }
+
+    /*button.en-button {
+      box-shadow: 0px 4px 0px #9825AA;
+    }*/
   }
 
   &__main-section {
