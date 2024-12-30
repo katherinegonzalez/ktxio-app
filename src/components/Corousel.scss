@@ -8,6 +8,7 @@
       background: none;
       cursor: pointer;
       padding: 0;
+      height: 162px;
     }
 
     .carousel-btn.next {
@@ -35,17 +36,16 @@
   .carousel-image {
     position: relative;
     width: 100%; /* Ancho de la imagen */
-    height: 162px;
+    height: 199px;
     overflow: hidden; /* Evita que el overlay salga de los límites */
-    cursor: pointer;
-    border-radius: 4px;
   }
   
   .carousel-image img {
     width: 100%;
-    height: 100%;
+    height: 162px;
     object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
     display: block;
+    border-radius: 4px;
   }
   
   .carousel-image .overlay {
@@ -53,7 +53,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 162px;
     background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
     color: #CACACA;
     font-family: Jua;
@@ -66,22 +66,22 @@
     align-items: center;
     opacity: 0; /* Comienza oculto */
     transition: opacity 0.3s ease; /* Efecto de transición */
+    cursor: pointer;
   }
   
   .carousel-image:hover .overlay {
     opacity: 1; /* Muestra el overlay al hacer hover */
   }
 
-  .carousel-image .sourceCode {
-    color: #CACACA;
-    font-family: Poppins;
+  .carousel-image .source-code {
+    font-family: Poppins-Medium;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 17px;
     text-align: center;
     position: absolute;
-    bottom: -40px; /* Debajo de la imagen */
+    margin-top: 10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
@@ -91,10 +91,14 @@
     white-space: nowrap; /* Evita que el texto haga saltos de línea */
     opacity: 0; /* Comienza oculto */
     transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none; /* Evita que interfiera con el mouse */
+    cursor: pointer;
+
+    a {
+      color: #CACACA;
+    }
   }
 
-  .carousel-image:hover .sourceCode {
+  .carousel-image:hover .source-code {
     opacity: 1; /* Muestra el texto al hacer hover */
     transform: translateX(-50%) translateY(5px); /* Desplaza hacia arriba suavemente */
   }

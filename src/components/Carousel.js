@@ -93,12 +93,12 @@ const Carousel = () => {
 
                         <div key={index}
                              className="carousel-image"
-                             onClick={() => openModal({title: project.title, video: project.video, image: project.image})}>
-                            <img src={project.image} alt={`Slide ${index}`}/>
-                            <div className="overlay">
+                             >
+                            <img src={project.image} alt={`Slide ${index}`} />
+                            <div className="overlay" onClick={() => openModal({title: project.title, video: project.video, image: project.image})}>
                                 <p>{project.title}</p>
                             </div>
-                            <div className="sourceCode">
+                            <div className="source-code">
                                 <a href="https://github.com/katherinegonzalez">SOURCE CODE</a>
                             </div>
                         </div>
