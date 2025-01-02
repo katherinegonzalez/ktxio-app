@@ -1,9 +1,16 @@
+import { useRef } from 'react';
 import './App.scss';
 import Carousel from './components/Carousel';
 import EmailForm from './components/EmailForm';
 import { ProgressBar } from './components/ProgressBar';
 
 function App() {
+
+  const sectionRef = useRef(null);
+
+  const scrollToSection = () => {
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="app">
@@ -34,7 +41,7 @@ function App() {
             tests, and get involved in front-end projects.
           </p>
 
-          <button>
+          <button onClick={scrollToSection}>
             View projects
           </button>
           <span>
@@ -69,7 +76,7 @@ function App() {
             </div>
           </aside>
       </section>
-      <section className="app__projects-articles-section">
+      <section className="app__projects-articles-section" ref={sectionRef}>
         <div className="app__projects-articles-section__projects-section">
           <div className="app__projects-articles-section__title">
             <h2>
@@ -111,11 +118,11 @@ function App() {
         <div className="app__skills-section__container">
           <h2>My skills ~</h2>
           <div className="app__skills-section__container__progress-bars">
-          <ProgressBar skill={'Javascript'} porcentage={90} marginRight={"25px"}/>
-          <ProgressBar skill={'HTML'} porcentage={90} marginRight={"25px"}/>
-          <ProgressBar skill={'CSS'} porcentage={80} marginRight={"25px"}/>
-          <ProgressBar skill={'React'} porcentage={85} marginRight={"25px"}/>
-          <ProgressBar skill={'Angular'} porcentage={60} marginRight={"25px"}/>
+          <ProgressBar skill={'Javascript'} porcentage={90} marginRight={"15px"}/>
+          <ProgressBar skill={'HTML'} porcentage={90} marginRight={"15px"}/>
+          <ProgressBar skill={'CSS'} porcentage={80} marginRight={"15px"}/>
+          <ProgressBar skill={'React'} porcentage={85} marginRight={"15px"}/>
+          <ProgressBar skill={'Angular'} porcentage={60} marginRight={"15px"}/>
           <ProgressBar skill={'Rxs'} porcentage={70} marginRight={"0px"}/>
           </div>
         </div>
@@ -136,9 +143,12 @@ function App() {
               If you want to build an amazing <br/>
               project drop me a line!
             </p>
-            <span>
-              {'</end>_'}
-            </span>
+            <div className='app__contact-section__end'>
+              <span>
+                {'</end>_'}
+              </span>
+            </div>
+           
           </div>
           <div className='app__contact-section__form-container'>
           <div className='app__contact-section__form'>
@@ -152,7 +162,7 @@ function App() {
 
       <section className='app__copyright-section'>
         <h3>
-            KTXIO • Copyright © 2002-2020
+            KTXIO • Copyright © 2002-2025
         </h3>
       </section>
     </div>

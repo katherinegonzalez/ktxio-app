@@ -132,6 +132,7 @@ body {
         margin: 24px 0 44px;
         padding: 7px 10px 9px;
         text-align: center;
+        cursor: pointer;
       }
     }
 
@@ -222,7 +223,6 @@ body {
   }
 
   &__projects-articles-section {
-    align-items: center;
     display: flex;
     flex-direction: column;
     padding: 199px 0 124px 0;
@@ -283,7 +283,6 @@ body {
     background-color: #1B1A1A;
     background-image: url('../public/texture-opacity-0-05.png');
     display: flex;
-    align-items: center;
     padding: 205px 0 230px 0;
     flex-direction: column;
 
@@ -293,6 +292,7 @@ body {
       font-size: 20px;
       letter-spacing: 0;
       line-height: 30px;
+      text-align: center;
     }
 
     p {
@@ -322,7 +322,8 @@ body {
 
     &__container {  
       display: flex;
-      margin: 100px 0;
+      margin: 100px 185px;
+      justify-content: space-between;
       
       &__progress-bars {
         display: flex;
@@ -333,12 +334,14 @@ body {
   &__contact-section {
 
     display: flex;
-    justify-content: space-around;
-    margin: -61px 150px 61px 150px;
+    justify-content: space-between;
+    margin: -61px 185px 61px 185px;
 
     &__title {
 
       justify-content: center;
+      display: flex;
+      flex-direction: column;
 
       h1 {
         color: #CF44F5;
@@ -367,8 +370,15 @@ body {
         font-weight: 600;
         letter-spacing: 0;
         line-height: 27px;
-        margin-bottom: 75px;
       }
+      
+    }
+
+    &__end {
+
+      display: flex;
+      align-items: flex-end;
+      flex: 1;
 
       span {
         opacity: 0.5;
@@ -378,8 +388,8 @@ body {
         font-weight: 500;
         letter-spacing: 0;
         line-height: 30px;
+        
       }
-      
     }
 
 
