@@ -3,13 +3,23 @@ import React, { useState } from 'react';
 import './EmailForm.scss';
 
 const EmailForm = () => {
+
+  const errorType = {
+    nameError: 'name-error',
+    emailError: 'email-error',
+    messageError: 'message-error'
+  }
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
+  const [error, setError] = useState('');
+
   const handleChange = (e) => {
+    console.log('entra');
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -18,7 +28,17 @@ const EmailForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('AAAA');
+    console.log('formData: ', formData);
+
+    if(formData.email === '') {
+      console.log('error');
+      setError(errorType.emailError);
+    } else if (formData.name === '') {
+      setError(errorType.nameError);
+    } else if (formData.message === '') {
+      setError(errorType.messageError);
+    }
+
 
     // Configura los parámetros de EmailJS
     /*emailjs.send(
@@ -45,7 +65,7 @@ const EmailForm = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          required
+          className={error === errorType.nameError ? 'input-error' : ''}
         />
       </label>
       <br />
@@ -57,6 +77,7 @@ const EmailForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
+          className={error === errorType.emailError ? 'input-error' : ''}
         />
       </label>
       <br />
@@ -67,10 +88,19 @@ const EmailForm = () => {
           value={formData.message}
           onChange={handleChange}
           required
+          className={error === errorType.messageError ? 'input-error' : ''}
         />
       </label>
       <div>
-        <button type="submit">Submit</button>
+        { error !== '' && 
+          <div className="errorMessage">
+            <p>
+              Error sending the message 
+            </p>
+          </div>
+        }
+        
+        <button className={error !=='' ? 'errorButton' : ''} type="submit">{ error === '' ? 'Submit' : 'Submit again'}</button>
       </div>
     </form>
   );
