@@ -16,7 +16,11 @@ const EmailForm = () => {
     message: ''
   });
 
+  const SUCCESS_MESSAGE = 'Message sent successfully'
+  const ERROR_MESSAGE = 'Error sending the message'
+
   const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     console.log('entra');
@@ -28,6 +32,8 @@ const EmailForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
+    setMessage('');
     console.log('formData: ', formData);
 
     if(formData.email === '') {
@@ -37,7 +43,13 @@ const EmailForm = () => {
       setError(errorType.nameError);
     } else if (formData.message === '') {
       setError(errorType.messageError);
-    }
+    } else {
+      setMessage(SUCCESS_MESSAGE)
+      setFormData({
+        name: '',
+        email: '',
+        message: ''})
+      }
 
 
     // Configura los parámetros de EmailJS
@@ -92,10 +104,11 @@ const EmailForm = () => {
         />
       </label>
       <div>
-        { error !== '' && 
-          <div className="errorMessage">
+        { (error !== '' || message !== '') && 
+          <div className={`formMessage ${error !== '' ? "errorMessage" : ""}`}>
             <p>
-              Error sending the message 
+            {error !== '' && ERROR_MESSAGE}
+            {message !== '' && message}   
             </p>
           </div>
         }
